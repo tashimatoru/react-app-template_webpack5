@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Wrap from 'wrap';
 
 const Index    = lazy(() => import('contents/index'));
@@ -15,22 +15,21 @@ const Router = props => {
             <div>now loading</div>
           }
         >
-          <Switch>
+          <Routes>
             <Route
-              exact
               path="/"
-              render={(props) => <Index />}
-            />
-            <Route
-              exact
-              path="/hoge"
-              render={(props) => <Hoge />}
+              element={<Index />}
             />
 
             <Route
-              component={Error404}
+              path="/hoge"
+              element={<Hoge />}
             />
-          </Switch>
+
+            <Route
+              element={<Error404 />}
+            />
+          </Routes>
         </Suspense>
       </Wrap>
     </BrowserRouter>

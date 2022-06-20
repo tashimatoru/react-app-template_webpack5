@@ -1,5 +1,4 @@
 import React from 'react';
-import {withRouter} from 'react-router';
 import {Link} from "react-router-dom";
 
 class Error404 extends React.Component {
@@ -11,7 +10,7 @@ class Error404 extends React.Component {
 
   render() {
     return (
-      <React.Fragment>
+      <>
         Error404
         <hr/>
         <p>
@@ -20,7 +19,7 @@ class Error404 extends React.Component {
         <p>
           <Link to="/hoge">Hoge</Link>
         </p>
-      </React.Fragment>
+      </>
     );
   }
 };
@@ -29,4 +28,4 @@ class Error404 extends React.Component {
 Error404.defaultProps = {
 };
 
-export default withRouter(Error404);
+export default Error404;

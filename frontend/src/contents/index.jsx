@@ -1,5 +1,4 @@
 import React from 'react';
-import {withRouter} from 'react-router';
 import {Link} from "react-router-dom";
 
 class Index extends React.Component {
@@ -11,13 +10,13 @@ class Index extends React.Component {
 
   render() {
     return (
-      <React.Fragment>
+      <>
         Index
         <hr/>
         <p>
           <Link to="/hoge">Hoge</Link>
         </p>
-      </React.Fragment>
+      </>
     );
   }
 };
@@ -26,4 +25,4 @@ class Index extends React.Component {
 Index.defaultProps = {
 };
 
-export default withRouter(Index);
+export default Index;

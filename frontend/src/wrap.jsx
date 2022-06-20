@@ -1,11 +1,10 @@
 import React from 'react';
-import {withRouter} from 'react-router';
 
 const Wrap = props => {
   return (
-    <React.Fragment>
+    <>
       {props?.children}
-    </React.Fragment>
+    </>
   )
 }
 
@@ -13,4 +12,4 @@ const Wrap = props => {
 Wrap.defaultProps = {
 };
 
-export default withRouter(Wrap);
+export default Wrap;

@@ -1,5 +1,4 @@
 import React from 'react';
-import {withRouter} from 'react-router';
 import {Link} from "react-router-dom";
 
 class Hoge extends React.Component {
@@ -8,15 +7,16 @@ class Hoge extends React.Component {
     this.state = {
     };
   }
+
   render() {
     return (
-      <React.Fragment>
+      <>
         Hoge
         <hr/>
         <p>
           <Link to="/">Index</Link>
         </p>
-      </React.Fragment>
+      </>
     );
   }
 };
@@ -25,4 +25,4 @@ class Hoge extends React.Component {
 Hoge.defaultProps = {
 };
 
-export default withRouter(Hoge);
+export default Hoge;
