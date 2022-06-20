@@ -1,9 +1,11 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 
-class ReactClassComponentJsx extends React.Component {
+class ClassComponentJsx extends React.Component {
   constructor(props) {
     super(props);
+
+    // state
     this.state = {
       // 年齢
       age: 0,
@@ -64,6 +66,12 @@ class ReactClassComponentJsx extends React.Component {
     return (
       <>
         <p>
+          Class Component Jsx
+        </p>
+
+        <hr/>
+
+        <p>
           this.props.name = {this.props.name}
         </p>
 
@@ -100,6 +108,7 @@ class ReactClassComponentJsx extends React.Component {
         </button>
 
         <hr/>
+
         <p>
           <Link to="/">Index</Link>
         </p>
@@ -109,9 +118,9 @@ class ReactClassComponentJsx extends React.Component {
 };
 
 // defaultProps
-ReactClassComponentJsx.defaultProps = {
+ClassComponentJsx.defaultProps = {
   // 名前
   name: "デフォルトの名前(props)",
 };
 
-export default ReactClassComponentJsx;
+export default ClassComponentJsx;
