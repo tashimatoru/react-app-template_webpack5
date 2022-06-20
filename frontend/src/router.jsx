@@ -6,6 +6,8 @@ const Index    = lazy(() => import('contents/index'));
 const Hoge     = lazy(() => import('contents/hoge'));
 const Error404 = lazy(() => import('contents/error/error404'));
 
+const ClassComponentJsx = lazy(() => import('contents/sample/class component_jsx'));
+
 const Router = props => {
   return (
     <BrowserRouter>
@@ -19,6 +21,11 @@ const Router = props => {
             <Route
               path="/"
               element={<Index />}
+            />
+
+            <Route
+              path="/sample/class_component_jsx"
+              element={<ClassComponentJsx />}
             />
 
             <Route
