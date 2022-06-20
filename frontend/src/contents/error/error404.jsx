@@ -16,9 +16,6 @@ class Error404 extends React.Component {
         <p>
           <Link to="/">Index</Link>
         </p>
-        <p>
-          <Link to="/hoge">Hoge</Link>
-        </p>
       </>
     );
   }

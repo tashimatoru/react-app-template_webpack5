@@ -3,7 +3,6 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Wrap from 'wrap';
 
 const Index    = lazy(() => import('contents/index'));
-const Hoge     = lazy(() => import('contents/hoge'));
 const Error404 = lazy(() => import('contents/error/error404'));
 
 const ClassComponentJsx = lazy(() => import('contents/sample/class component_jsx'));
@@ -29,11 +28,7 @@ const Router = props => {
             />
 
             <Route
-              path="/hoge"
-              element={<Hoge />}
-            />
-
-            <Route
+              path={`/*`}
               element={<Error404 />}
             />
           </Routes>

@@ -14,7 +14,7 @@ class Index extends React.Component {
         Index
         <hr/>
         <p>
-          <Link to="/hoge">Hoge</Link>
+          <Link to="/hoge">404</Link>
         </p>
         <p>
           <Link to="/sample/class_component_jsx">ClassComponent JSX</Link>
