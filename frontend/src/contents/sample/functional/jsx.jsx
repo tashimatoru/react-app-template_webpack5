@@ -1,36 +1,32 @@
 import React, {useEffect, useState} from 'react';
 import {Link} from "react-router-dom";
 
-const FunctionalComponentJsx = (props) => {
-  // props
-  const {
-    name,
-    children,
-    ...other
-  } = props;
+// parts
+import JsxComponent from 'contents/sample/functional/jsx_component';
 
+const FunctionalComponentJsx = (props) => {
   // state
   const [age, setAge] = useState(0);
 
   useEffect(() => {
     // mount
-    console.log("mount");
+    console.log("(root)mount");
 
     // unmount
     return () => {
-      console.log("unmount");
+      console.log("(root)unmount");
     }
   }, []);
 
   // update
   useEffect(() => {
-    console.log("update");
+    console.log("(root)update");
   });
 
   // mount, update
   // Only when `age` is updated
   useEffect(() => {
-    console.log("mount & update(age)");
+    console.log("(root)mount & update(age)");
   }, [age]);
 
   /**
@@ -62,16 +58,6 @@ const FunctionalComponentJsx = (props) => {
 
       <hr/>
 
-      <p>
-        this.props.name = {name}
-      </p>
-
-      <hr/>
-
-      <p>
-        this.state.age = {age}
-      </p>
-
       <button
         onClick={() => {
           handleDecrementAge();
@@ -96,7 +82,18 @@ const FunctionalComponentJsx = (props) => {
         reset
       </button>
 
+      <p>
+        this.state.age = {age}
+      </p>
+
+
+      <JsxComponent
+        // 年齢
+        age={age}
+      />
+
       <hr/>
+
       <p>
         <Link to="/">Index</Link>
       </p>
@@ -106,8 +103,6 @@ const FunctionalComponentJsx = (props) => {
 
 // defaultProps
 FunctionalComponentJsx.defaultProps = {
-  // 名前
-  name: "デフォルトの名前(props)",
 };
 
 export default FunctionalComponentJsx;

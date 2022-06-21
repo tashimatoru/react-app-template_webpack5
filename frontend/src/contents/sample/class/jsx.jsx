@@ -1,6 +1,9 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 
+// parts
+import JsxComponent from 'contents/sample/class/jsx_component';
+
 class ClassComponentJsx extends React.Component {
   constructor(props) {
     super(props);
@@ -16,7 +19,7 @@ class ClassComponentJsx extends React.Component {
    * mount
    */
   componentDidMount() {
-    console.log(`componentDidMount`);
+    console.log(`(root)mount`);
   }
 
   /**
@@ -25,14 +28,14 @@ class ClassComponentJsx extends React.Component {
    * @param prevState
    */
   componentDidUpdate(prevProps, prevState) {
-    console.log(`componentDidUpdate`, prevProps, prevState);
+    console.log(`(root)update`, prevProps, prevState);
   }
 
   /**
    * unmount
    */
   componentWillUnmount() {
-    console.log(`componentWillUnmount`);
+    console.log(`(root)unmount`);
   }
 
   /**
@@ -71,16 +74,6 @@ class ClassComponentJsx extends React.Component {
 
         <hr/>
 
-        <p>
-          this.props.name = {this.props.name}
-        </p>
-
-        <hr/>
-
-        <p>
-          this.state.age = {this.state.age}
-        </p>
-
         <button
           onClick={() => {
             this.handleDecrementAge();
@@ -105,6 +98,15 @@ class ClassComponentJsx extends React.Component {
           reset
         </button>
 
+        <p>
+          this.state.age = {this.state.age}
+        </p>
+
+        <JsxComponent
+          // 年齢
+          age={this.state.age}
+        />
+
         <hr/>
 
         <p>
@@ -117,8 +119,6 @@ class ClassComponentJsx extends React.Component {
 
 // defaultProps
 ClassComponentJsx.defaultProps = {
-  // 名前
-  name: "デフォルトの名前(props)",
 };
 
 export default ClassComponentJsx;
