@@ -5,8 +5,8 @@ import Wrap from 'wrap';
 const Index    = lazy(() => import('contents/index'));
 const Error404 = lazy(() => import('contents/error/error404'));
 
-const ClassComponentJsx      = lazy(() => import('contents/sample/class_component_jsx'));
-const FunctionalComponentJsx = lazy(() => import('contents/sample/functional_component_jsx'));
+const Sample_Class_Jsx      = lazy(() => import('contents/sample/class/jsx'));
+const Sample_Functional_Jsx = lazy(() => import('contents/sample/functional/jsx'));
 
 
 const Router = props => {
@@ -25,13 +25,13 @@ const Router = props => {
             />
 
             <Route
-              path="/sample/class_component_jsx"
-              element={<ClassComponentJsx />}
+              path="/sample/class/jsx"
+              element={<Sample_Class_Jsx />}
             />
 
             <Route
-              path="/sample/functional_component_jsx"
-              element={<FunctionalComponentJsx />}
+              path="/sample/functional/jsx"
+              element={<Sample_Functional_Jsx />}
             />
 
             <Route
