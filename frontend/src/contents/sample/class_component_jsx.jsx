@@ -81,8 +81,6 @@ class ClassComponentJsx extends React.Component {
           this.state.age = {this.state.age}
         </p>
 
-        <hr/>
-
         <button
           onClick={() => {
             this.handleDecrementAge();

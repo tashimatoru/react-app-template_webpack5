@@ -30,7 +30,7 @@ const FunctionalComponentJsx = (props) => {
   // mount, update
   // Only when `age` is updated
   useEffect(() => {
-    console.log("mount(age)");
+    console.log("mount & update(age)");
   }, [age]);
 
   /**
@@ -71,8 +71,6 @@ const FunctionalComponentJsx = (props) => {
       <p>
         this.state.age = {age}
       </p>
-
-      <hr/>
 
       <button
         onClick={() => {
