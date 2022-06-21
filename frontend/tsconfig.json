@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "isolatedModules": true,
+    "forceConsistentCasingInFileNames": true,
+    "sourceMap": true,
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "experimentalDecorators": true,
+    "jsx": "react",
+    "lib": [
+      "dom",
+      "es6"
+    ],
+    "allowJs": true,
+    "alwaysStrict": true,
+    "target": "es5",
+    "baseUrl": "src",
+    "skipLibCheck": true,
+    // todo
+    //"noImplicitAny": true,
+    //"strict": true,
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+  ],
+  "exclude": [
+    "node_modules",
+  ]
+}

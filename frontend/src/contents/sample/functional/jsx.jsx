@@ -86,7 +86,6 @@ const FunctionalComponentJsx = (props) => {
         this.state.age = {age}
       </p>
 
-
       <JsxComponent
         // 年齢
         age={age}

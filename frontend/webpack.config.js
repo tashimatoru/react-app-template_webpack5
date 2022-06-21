@@ -25,6 +25,16 @@ module.exports = {
           loader: "babel-loader",
         },
       },
+      // tsx
+      {
+        test: [
+          /\.tsx?$/
+        ],
+        exclude: path.join(__dirname, "/node_modules/"),
+        use: {
+          loader: "ts-loader",
+        },
+      },
       // css(sass) include node_modules
       {
         test: /node_modules\/.*\.(css|s[ac]ss)$/,
@@ -94,7 +104,7 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['.js', '.jsx', '.css', '.yml', '.yaml'],
+    extensions: ['.js', '.jsx', '.tsx', '.css', '.yml', '.yaml'],
     modules: [
       path.resolve('./src'),
       "node_modules"

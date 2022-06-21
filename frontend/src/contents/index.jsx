@@ -22,6 +22,9 @@ class Index extends React.Component {
         <p>
           <Link to="/sample/functional/jsx">Functional Component JSX</Link>
         </p>
+        <p>
+          <Link to="/sample/functional/tsx">Functional Component TSX</Link>
+        </p>
       </>
     );
   }
